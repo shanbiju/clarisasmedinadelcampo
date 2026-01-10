@@ -1,21 +1,24 @@
 import { Phone, Mail, MapPin, Clock, Navigation } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-24 md:py-32 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gold-light text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in">
-            Find Us
+            {t("contact.hero.label")}
           </p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-semibold animate-fade-in">
-            Contact & Location
+            {t("contact.hero.title")}
           </h1>
           <p className="mt-6 text-lg text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in-delayed">
-            We welcome visitors, pilgrims, and customers
+            {t("contact.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -29,7 +32,7 @@ const Contact = () => {
                 <MapPin className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                Address
+                {t("contact.address")}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Duque de Ahumada, 49<br />
@@ -43,7 +46,7 @@ const Contact = () => {
                 <Phone className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                Phone
+                {t("contact.phone")}
               </h3>
               <div className="text-muted-foreground text-sm space-y-1">
                 <a href="tel:+34983800593" className="block hover:text-primary transition-colors">
@@ -60,7 +63,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                Email
+                {t("contact.email")}
               </h3>
               <a 
                 href="mailto:contact@santaclara.es" 
@@ -75,12 +78,12 @@ const Contact = () => {
                 <Clock className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                Hours
+                {t("contact.hours")}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 9:30 – 14:00<br />
                 16:30 – 18:45<br />
-                <span className="text-xs">(Sundays until 19:00)</span>
+                <span className="text-xs">{t("contact.sundays-note")}</span>
               </p>
             </div>
           </div>
@@ -91,8 +94,8 @@ const Contact = () => {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="How to Reach Us"
-            subtitle="Located in the heart of historic Medina del Campo"
+            title={t("contact.map.title")}
+            subtitle={t("contact.map.subtitle")}
           />
 
           <div className="max-w-4xl mx-auto">
@@ -117,12 +120,10 @@ const Contact = () => {
                   <Navigation className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
-                      Driving Directions
+                      {t("contact.directions.title")}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Traveling on the Northwest Highway (A-6) from Madrid, we are 200 meters 
-                      away when entering through the 2nd entrance to Medina del Campo. Coming 
-                      from Coruña-Madrid direction, take the 3rd entrance to Medina del Campo.
+                      {t("contact.directions.text")}
                     </p>
                   </div>
                 </div>
@@ -139,26 +140,25 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card p-6 md:p-8 rounded-lg shadow-sm">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-6">
-                  Bakery Hours
+                  {t("contact.bakery-hours")}
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-accent font-medium mb-1">Daily</p>
+                    <p className="text-sm text-accent font-medium mb-1">{t("contact.daily")}</p>
                     <p className="text-muted-foreground">
-                      Morning: 9:30 – 14:00<br />
-                      Afternoon: 16:30 – 18:45
+                      {t("bakery.morning")}: 9:30 – 14:00<br />
+                      {t("bakery.afternoon")}: 16:30 – 18:45
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-accent font-medium mb-1">Sundays & Holidays</p>
+                    <p className="text-sm text-accent font-medium mb-1">{t("contact.sundays-holidays")}</p>
                     <p className="text-muted-foreground">
-                      Same hours, but open until 19:00 in the afternoon
+                      {t("contact.sundays-hours")}
                     </p>
                   </div>
                   <div className="pt-4 border-t border-border">
                     <p className="text-sm text-muted-foreground">
-                      For special orders, you can arrange pickup times by calling in advance. 
-                      Please avoid calling between 14:30–16:30 and 19:00–19:45.
+                      {t("contact.special-orders")}
                     </p>
                   </div>
                 </div>
@@ -166,21 +166,20 @@ const Contact = () => {
 
               <div className="bg-card p-6 md:p-8 rounded-lg shadow-sm">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-6">
-                  Mass Schedule
+                  {t("contact.mass-schedule")}
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-accent font-medium mb-1">Weekdays</p>
+                    <p className="text-sm text-accent font-medium mb-1">{t("contact.weekdays")}</p>
                     <p className="text-muted-foreground">19:00</p>
                   </div>
                   <div>
-                    <p className="text-sm text-accent font-medium mb-1">Sundays & Feast Days</p>
+                    <p className="text-sm text-accent font-medium mb-1">{t("contact.sundays-feast")}</p>
                     <p className="text-muted-foreground">08:30</p>
                   </div>
                   <div className="pt-4 border-t border-border">
                     <p className="text-sm text-muted-foreground">
-                      Exposition of the Blessed Sacrament on Thursdays, Sundays, First Fridays, 
-                      and Marian Feast Days.
+                      {t("contact.exposition-note")}
                     </p>
                   </div>
                 </div>
@@ -194,10 +193,10 @@ const Contact = () => {
       <section className="py-16 md:py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-2xl md:text-3xl text-primary-foreground mb-4">
-            Peace and Good
+            {t("contact.peace")}
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto">
-            We look forward to welcoming you to our monastery. May God bless your journey.
+            {t("contact.peace.text")}
           </p>
         </div>
       </section>

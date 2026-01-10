@@ -1,21 +1,24 @@
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import processionImage from "@/assets/santa-clara-procession.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Events = () => {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-24 md:py-32 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gold-light text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in">
-            Celebrations
+            {t("events.hero.label")}
           </p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-semibold animate-fade-in">
-            Events & Feast Days
+            {t("events.hero.title")}
           </h1>
           <p className="mt-6 text-lg text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in-delayed">
-            Join us in celebrating our faith throughout the liturgical year
+            {t("events.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -24,8 +27,8 @@ const Events = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="Annual Celebrations"
-            subtitle="Two major events mark our liturgical calendar"
+            title={t("events.annual.title")}
+            subtitle={t("events.annual.subtitle")}
           />
 
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -36,30 +39,25 @@ const Events = () => {
               </div>
               <div className="p-6 md:p-8">
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-                  Holy Week
+                  {t("events.holyweek.label")}
                 </p>
                 <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
-                  The Christ of Santa Clara
+                  {t("events.holyweek.title")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  During Holy Week, we participate in two significant processions featuring 
-                  our treasured <strong>Gothic Christ</strong> (13th–14th century):
+                  {t("events.holyweek.text")}
                 </p>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex gap-3">
                     <span className="text-gold">•</span>
                     <span>
-                      <strong>Holy Thursday:</strong> The Procession of Charity, during which 
-                      the image of the Christ of Santa Clara descends from the monastery and 
-                      joins the procession through the town.
+                      <strong>{t("events.holyweek.thursday")}</strong> {t("events.holyweek.thursday.text")}
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-gold">•</span>
                     <span>
-                      <strong>Good Friday:</strong> The Procession of Sacrifice, from the 
-                      Parish of San Miguel to the Monastery, where the image is solemnly 
-                      returned and hung once more.
+                      <strong>{t("events.holyweek.friday")}</strong> {t("events.holyweek.friday.text")}
                     </span>
                   </li>
                 </ul>
@@ -75,23 +73,19 @@ const Events = () => {
               />
               <div className="p-6 md:p-8">
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-                  August 9–11
+                  {t("events.triduum.label")}
                 </p>
                 <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
-                  Triduum in Honor of Saint Clare
+                  {t("events.triduum.title")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  From August 9 to 11, we celebrate the Triduum in honor of our foundress, 
-                  <strong> Saint Clare of Assisi</strong>, whose feast day is August 11.
+                  {t("events.triduum.text1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The statue of Saint Clare is carried in procession through the 
-                  "Barrio de las Claras" (Neighborhood of the Clares) — a beloved tradition 
-                  that draws many faithful from across the region.
+                  {t("events.triduum.text2")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  As the oldest monastery in the "Villa de los Trece Roeles," these 
-                  celebrations are especially well-attended.
+                  {t("events.triduum.text3")}
                 </p>
               </div>
             </div>
@@ -103,23 +97,23 @@ const Events = () => {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="Worship Schedule"
-            subtitle="You are welcome to join us in prayer"
+            title={t("events.worship.title")}
+            subtitle={t("events.worship.subtitle")}
           />
 
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card p-6 md:p-8 rounded-lg">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-                  Daily Mass
+                  {t("events.mass.title")}
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center border-b border-border pb-3">
-                    <span className="text-muted-foreground">Weekdays</span>
+                    <span className="text-muted-foreground">{t("events.mass.weekdays")}</span>
                     <span className="font-medium text-foreground">19:00</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Sundays & Feast Days</span>
+                    <span className="text-muted-foreground">{t("events.mass.sundays")}</span>
                     <span className="font-medium text-foreground">08:30</span>
                   </div>
                 </div>
@@ -127,28 +121,28 @@ const Events = () => {
 
               <div className="bg-card p-6 md:p-8 rounded-lg">
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-                  Exposition of the Blessed Sacrament
+                  {t("events.exposition.title")}
                 </h3>
                 <div className="space-y-3 text-muted-foreground">
-                  <p>• Thursdays and Sundays</p>
-                  <p>• First Fridays of the month</p>
-                  <p>• The 18th of each month (Vocational Prayer)</p>
-                  <p>• Marian Feast Days</p>
+                  <p>• {t("events.exposition.thursdays")}</p>
+                  <p>• {t("events.exposition.fridays")}</p>
+                  <p>• {t("events.exposition.18th")}</p>
+                  <p>• {t("events.exposition.marian")}</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-8 bg-card p-6 md:p-8 rounded-lg text-center">
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-                Exposition Hours
+                {t("events.exposition.hours")}
               </h3>
               <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
-                <span>Morning: 9:30 – 13:30</span>
+                <span>{t("events.exposition.morning")}</span>
                 <span className="text-border">|</span>
-                <span>Afternoon: 16:30 – 19:00</span>
+                <span>{t("events.exposition.afternoon")}</span>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
-                Concluding with Benediction of the Blessed Sacrament
+                {t("events.exposition.benediction")}
               </p>
             </div>
           </div>
@@ -159,11 +153,10 @@ const Events = () => {
       <section className="py-16 md:py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-heading text-2xl md:text-3xl text-primary-foreground mb-4">
-            Join Us in Prayer
+            {t("events.cta.title")}
           </h2>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto">
-            Whether you join us in person or remember us in your prayers, we are united in 
-            the Lord. May God bless you with His peace.
+            {t("events.cta.text")}
           </p>
         </div>
       </section>
