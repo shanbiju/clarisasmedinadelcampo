@@ -66,10 +66,10 @@ const Contact = () => {
                 {t("contact.email")}
               </h3>
               <a 
-                href="mailto:contact@santaclara.es" 
+                href="mailto:clarisasmedinadelcampo@gmail.com" 
                 className="text-muted-foreground text-sm hover:text-primary transition-colors"
               >
-                contact@santaclara.es
+                clarisasmedinadelcampo@gmail.com
               </a>
             </div>
 
