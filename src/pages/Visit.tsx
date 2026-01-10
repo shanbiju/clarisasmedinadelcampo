@@ -1,21 +1,24 @@
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import gothicChrist from "@/assets/gothic-christ.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Visit = () => {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-24 md:py-32 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gold-light text-sm tracking-[0.3em] uppercase mb-4 animate-fade-in">
-            Discover
+            {t("visit.hero.label")}
           </p>
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground font-semibold animate-fade-in">
-            What to See
+            {t("visit.hero.title")}
           </h1>
           <p className="mt-6 text-lg text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in-delayed">
-            Sacred art and treasures of our monastery
+            {t("visit.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -24,8 +27,8 @@ const Visit = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <SectionHeader
-            title="Sacred Treasures"
-            subtitle="Art and faith united through centuries"
+            title={t("visit.treasures.title")}
+            subtitle={t("visit.treasures.subtitle")}
           />
 
           <div className="space-y-16 max-w-5xl mx-auto">
@@ -33,20 +36,16 @@ const Visit = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-                  The Church
+                  {t("visit.church.label")}
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                  Our Historic Chapel
+                  {t("visit.church.title")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The church of the Monastery of Santa Clara invites you into centuries of 
-                  prayer. Its simple yet beautiful architecture reflects the Franciscan 
-                  charism of poverty and humility.
+                  {t("visit.church.text1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Visitors are welcome to attend Mass or spend time in quiet prayer. 
-                  The sisters pray the Liturgy of the Hours behind the choir grate, 
-                  continuing an unbroken tradition of praise.
+                  {t("visit.church.text2")}
                 </p>
               </div>
               <div className="bg-secondary rounded-lg aspect-[4/3] flex items-center justify-center">
@@ -65,21 +64,16 @@ const Visit = () => {
               </div>
               <div className="order-1 lg:order-2">
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-                  13th–14th Century
+                  {t("visit.christ.label")}
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                  The Gothic Christ
+                  {t("visit.christ.title")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  One of the most treasured pieces of the monastery is the <strong>Gothic 
-                  Christ</strong>, dating from the 13th to 14th century. This ancient 
-                  crucifix has been venerated by the faithful for over 700 years.
+                  {t("visit.christ.text1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Each Holy Week, the Christ descends from the monastery to join the 
-                  Procession of Charity on Holy Thursday, returning on Good Friday in the 
-                  Procession of Sacrifice — a deeply moving tradition cherished by the 
-                  people of Medina del Campo.
+                  {t("visit.christ.text2")}
                 </p>
               </div>
             </div>
@@ -88,21 +82,16 @@ const Visit = () => {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-                  1540 · Hernando de Esturmio
+                  {t("visit.virgin.label")}
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                  Virgen de la Antigua
+                  {t("visit.virgin.title")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  A monumental painting of the <strong>Virgin of the Antigua</strong> by 
-                  <strong> Hernando de Esturmio</strong>, dated 1540. This magnificent work 
-                  is the only painting created by this artist on canvas — all his other 
-                  works were on wood panels.
+                  {t("visit.virgin.text1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The painting reflects the devotion of the Renaissance period and remains 
-                  a significant piece of Spanish religious art, treasured by the monastery 
-                  and admired by art historians.
+                  {t("visit.virgin.text2")}
                 </p>
               </div>
               <div className="bg-secondary rounded-lg aspect-[4/3] flex items-center justify-center">
@@ -118,22 +107,20 @@ const Visit = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-6">
-              Visiting the Monastery
+              {t("visit.info.title")}
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              The church is open to visitors during bakery hours and for scheduled Masses. 
-              As a cloistered community, the interior of the monastery is not open to the 
-              public, but we welcome all to pray in our church and visit our bakery.
+              {t("visit.info.text")}
             </p>
             
             <div className="bg-card p-6 md:p-8 rounded-lg">
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-                Visitor Hours
+                {t("visit.hours.title")}
               </h3>
               <div className="space-y-2 text-muted-foreground">
-                <p>Morning: 9:30 – 14:00</p>
-                <p>Afternoon: 16:30 – 18:45</p>
-                <p className="text-sm pt-2">Sundays & Holidays: Open until 19:00</p>
+                <p>{t("visit.hours.morning")}</p>
+                <p>{t("visit.hours.afternoon")}</p>
+                <p className="text-sm pt-2">{t("visit.hours.sundays")}</p>
               </div>
             </div>
           </div>
