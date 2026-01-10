@@ -135,7 +135,7 @@ const Bakery = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 {language === "es"
-                  ? 'Compre directamente en nuestro monasterio a través del tradicional "torno" (ventana giratoria). Toque el timbre y una hermana le atenderá.'
+                  ? 'Compré directamente en nuestro monasterio a través del torno.  Toque el tiemble y una hermana le atenderá.'
                   : 'Purchase directly from our monastery through the traditional "torno" (revolving window). Ring the bell and a sister will assist you.'}
               </p>
               <p className="text-sm text-foreground font-medium">
