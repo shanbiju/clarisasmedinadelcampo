@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 const Footer = () => {
-  const { language, t } = useLanguage();
-  
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  const {
+    language,
+    t
+  } = useLanguage();
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About */}
@@ -15,9 +15,7 @@ const Footer = () => {
               {t("footer.monastery-name")}
             </h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              {language === "es" 
-                ? "Una comunidad de Hermanas Clarisas en Medina del Campo, España, viviendo una vida contemplativa desde 1246."
-                : "A community of Poor Clare Sisters in Medina del Campo, Spain, living a contemplative life since 1246."}
+              {language === "es" ? "Una comunidad de Hermanas Clarisas en Medina del Campo, España, viviendo una vida contemplativa desde 1246." : "A community of Poor Clare Sisters in Medina del Campo, Spain, living a contemplative life since 1246."}
             </p>
             <p className="mt-4 text-sm italic text-primary-foreground/70">
               {language === "es" ? '"Paz y Bien"' : '"Peace and Good"'}
@@ -68,8 +66,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="flex-shrink-0 text-gold-light" />
-                <a href="mailto:contact@santaclara.es" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  contact@santaclara.es
+                <a className="text-primary-foreground/80 hover:text-primary-foreground transition-colors" href="mailto:\u200Bclarisasmedinadelcampo@gmail.com">
+                  ​clarisasmedinadelcampo@gmail.com
                 </a>
               </div>
             </div>
@@ -100,8 +98,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
