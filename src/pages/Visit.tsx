@@ -1,7 +1,11 @@
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
-import gothicChrist from "@/assets/gothic-christ.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+// ✅ Image imports (THIS FIXES THE ERROR)
+import chapelImage from "@/assets/iglesia-capilla.jpg";
+import gothicChrist from "@/assets/gothic-christ.jpg";
+import virgenAntiguaImage from "@/assets/virgen-antigua.jpg";
 
 const Visit = () => {
   const { t } = useLanguage();
@@ -32,7 +36,8 @@ const Visit = () => {
           />
 
           <div className="space-y-16 max-w-5xl mx-auto">
-            {/* The Church */}
+
+            {/* Our Historic Chapel */}
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
@@ -48,9 +53,13 @@ const Visit = () => {
                   {t("visit.church.text2")}
                 </p>
               </div>
-              <div className="bg-secondary rounded-lg aspect-[4/3] flex items-center justify-center">
-                <span className="text-8xl text-stone/40">⛪</span>
-              </div>
+
+              <img
+                src={chapelImage}
+                alt="Capilla histórica del Monasterio de Santa Clara"
+                className="rounded-lg shadow-lg w-full aspect-[4/3] object-cover"
+                loading="lazy"
+              />
             </div>
 
             {/* Gothic Christ */}
@@ -58,10 +67,12 @@ const Visit = () => {
               <div className="order-2 lg:order-1">
                 <img
                   src={gothicChrist}
-                  alt="Gothic Christ of Santa Clara"
-                  className="rounded-lg shadow-lg w-full"
+                  alt="Cristo gótico del Monasterio de Santa Clara"
+                  className="rounded-lg shadow-lg w-full aspect-[4/3] object-cover"
+                  loading="lazy"
                 />
               </div>
+
               <div className="order-1 lg:order-2">
                 <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
                   {t("visit.christ.label")}
@@ -94,10 +105,15 @@ const Visit = () => {
                   {t("visit.virgin.text2")}
                 </p>
               </div>
-              <div className="bg-secondary rounded-lg aspect-[4/3] flex items-center justify-center">
-                <span className="text-8xl text-stone/40">🖼️</span>
-              </div>
+
+              <img
+                src={virgenAntiguaImage}
+                alt="Virgen de la Antigua del Monasterio de Santa Clara"
+                className="rounded-lg shadow-lg w-full aspect-[4/3] object-cover"
+                loading="lazy"
+              />
             </div>
+
           </div>
         </div>
       </section>
@@ -112,7 +128,7 @@ const Visit = () => {
             <p className="text-muted-foreground leading-relaxed mb-8">
               {t("visit.info.text")}
             </p>
-            
+
             <div className="bg-card p-6 md:p-8 rounded-lg">
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
                 {t("visit.hours.title")}
@@ -120,7 +136,9 @@ const Visit = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>{t("visit.hours.morning")}</p>
                 <p>{t("visit.hours.afternoon")}</p>
-                <p className="text-sm pt-2">{t("visit.hours.sundays")}</p>
+                <p className="text-sm pt-2">
+                  {t("visit.hours.sundays")}
+                </p>
               </div>
             </div>
           </div>
