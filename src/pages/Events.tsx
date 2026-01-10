@@ -31,44 +31,45 @@ const Events = () => {
       subtitle={t("events.annual.subtitle")}
     />
 
-    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-      {/* Holy Week */}
-      <div className="bg-card rounded-lg overflow-hidden shadow-sm">
-        <img
-          src={holyWeekImage}
-          alt="Semana Santa en el Monasterio de Santa Clara"
-          className="w-full aspect-video object-cover"
-          loading="lazy"
-        />
-
-        <div className="p-6 md:p-8">
-          <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">
-            {t("events.holyweek.label")}
-          </p>
-          <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
-            {t("events.holyweek.title")}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            {t("events.holyweek.text")}
-          </p>
-          <ul className="space-y-3 text-muted-foreground">
-            <li className="flex gap-3">
-              <span className="text-gold">•</span>
-              <span>
-                <strong>{t("events.holyweek.thursday")}</strong>{" "}
-                {t("events.holyweek.thursday.text")}
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-gold">•</span>
-              <span>
-                <strong>{t("events.holyweek.friday")}</strong>{" "}
-                {t("events.holyweek.friday.text")}
-              </span>
-            </li>
-          </ul>
+    <section className="py-16 md:py-24 bg-background">  
+        <div className="container mx-auto px-4">  
+          <SectionHeader  
+            title={t("events.annual.title")}  
+            subtitle={t("events.annual.subtitle")}  
+          />  <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">  
+        {/* Holy Week */}  
+        <div className="bg-card rounded-lg overflow-hidden shadow-sm">  
+          <div className="aspect-video bg-secondary flex items-center justify-center">  
+            <span className="text-6xl">✝️</span>  
+          </div>  
+          <div className="p-6 md:p-8">  
+            <p className="text-accent text-sm tracking-[0.2em] uppercase mb-2">  
+              {t("events.holyweek.label")}  
+            </p>  
+            <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">  
+              {t("events.holyweek.title")}  
+            </h3>  
+            <p className="text-muted-foreground leading-relaxed mb-4">  
+              {t("events.holyweek.text")}  
+            </p>  
+            <ul className="space-y-3 text-muted-foreground">  
+              <li className="flex gap-3">  
+                <span className="text-gold">•</span>  
+                <span>  
+                  <strong>{t("events.holyweek.thursday")}</strong> {t("events.holyweek.thursday.text")}  
+                </span>  
+              </li>  
+              <li className="flex gap-3">  
+                <span className="text-gold">•</span>  
+                <span>  
+                  <strong>{t("events.holyweek.friday")}</strong> {t("events.holyweek.friday.text")}  
+                </span>  
+              </li>  
+            </ul>  
+          </div>  
         </div>
-      </div>
+
+
 
             {/* Triduum of Saint Clare */}
             <div className="bg-card rounded-lg overflow-hidden shadow-sm">
