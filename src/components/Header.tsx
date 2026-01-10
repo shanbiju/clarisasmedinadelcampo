@@ -30,7 +30,7 @@ const Header = () => {
               Santa Clara
             </span>
             <span className="text-xs text-muted-foreground tracking-widest uppercase">
-              Monastery · Medina del Campo
+              Monasterio · Medina del Campo
             </span>
           </Link>
 
