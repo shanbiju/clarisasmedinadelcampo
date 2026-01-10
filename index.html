@@ -1,27 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+
+    <!-- SEO -->
     <title>Monastery of Santa Clara | Medina del Campo, Spain</title>
-    <meta name="description" content="Welcome to the Monastery of Santa Clara in Medina del Campo, Spain. A community of Poor Clare Sisters since 1246. Visit our church and artisanal bakery." />
+    <meta
+      name="description"
+      content="Welcome to the Monastery of Santa Clara in Medina del Campo, Spain. A community of Poor Clare Sisters since 1246. Visit our historic church and artisanal convent bakery."
+    />
+    <meta
+      name="keywords"
+      content="Monastery of Santa Clara, Medina del Campo, Poor Clare Sisters, convent bakery, marzipan, Spanish religious heritage"
+    />
     <meta name="author" content="Monastery of Santa Clara" />
-    <meta name="keywords" content="Santa Clara, Monastery, Medina del Campo, Poor Clare Sisters, convent bakery, marzipan, Spanish sweets" />
     <link rel="canonical" href="https://santaclara.es" />
 
-    <meta property="og:title" content="Monastery of Santa Clara | Medina del Campo" />
-    <meta property="og:description" content="A community of Poor Clare Sisters since 1246. Visit our historic monastery and artisanal bakery." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
 
+    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+    <meta property="og:title" content="Monastery of Santa Clara | Medina del Campo" />
+    <meta
+      property="og:description"
+      content="A community of Poor Clare Sisters since 1246. Discover our monastery, history, and artisanal convent bakery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://santaclara.es" />
+    <meta property="og:image" content="https://santaclara.es/og-image.jpg" />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Monastery of Santa Clara" />
-    <meta name="twitter:description" content="A community of Poor Clare Sisters since 1246 in Medina del Campo, Spain." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Monastery of Santa Clara | Medina del Campo" />
+    <meta
+      name="twitter:description"
+      content="A historic monastery of Poor Clare Sisters since 1246 in Medina del Campo, Spain."
+    />
+    <meta name="twitter:image" content="https://santaclara.es/og-image.jpg" />
+
+    <!-- Structured Data (Local SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ReligiousOrganization",
+        "name": "Monastery of Santa Clara",
+        "url": "https://santaclara.es",
+        "image": "https://santaclara.es/og-image.jpg",
+        "description": "A community of Poor Clare Sisters since 1246 in Medina del Campo, Spain.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Medina del Campo",
+          "addressRegion": "Castile and León",
+          "addressCountry": "ES"
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- App Entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
