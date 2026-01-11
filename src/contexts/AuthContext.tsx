@@ -21,17 +21,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const checkAdminRole = async (userId: string) => {
     try {
-      const { data, error } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", userId)
-        .eq("role", "admin")
-        .maybeSingle();
+      // Use a backend role-check function (SECURITY DEFINER) so we don't need
+      // direct SELECT access to the user_roles table from the client.
+      const { data, error } = await supabase.rpc("has_role", {
+        _user_id: userId,
+        _role: "admin",
+      });
 
       if (error) {
         console.error("Error checking admin role:", error);
         return false;
       }
+
       return !!data;
     } catch (err) {
       console.error("Error checking admin role:", err);
