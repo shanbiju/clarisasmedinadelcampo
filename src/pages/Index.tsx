@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Church, Heart, Cookie } from "lucide-react";
+import { ArrowRight, Church, Heart, Cookie, Play } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import FeatureCard from "@/components/FeatureCard";
 import BakeryItemCard from "@/components/BakeryItemCard";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -180,6 +181,31 @@ const Index = () => {
               {t("bakery.view-all")}
               <ArrowRight size={18} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Videos Section */}
+      <section className="py-16 md:py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            title={t("videos.title")}
+            subtitle={t("videos.subtitle")}
+          />
+          
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div className="space-y-4">
+              <YouTubeEmbed 
+                videoId="CUV7e_3tiEY" 
+                title={language === "es" ? "Monasterio de Santa Clara" : "Monastery of Santa Clara"}
+              />
+            </div>
+            <div className="space-y-4">
+              <YouTubeEmbed 
+                videoId="FCjq-qdEtgQ" 
+                title={language === "es" ? "Vida en el Monasterio" : "Life in the Monastery"}
+              />
+            </div>
           </div>
         </div>
       </section>

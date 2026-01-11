@@ -9,10 +9,11 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { toast } from "sonner";
 import { Plus, Pencil, Trash2, LogOut, Home } from "lucide-react";
 import { Link } from "react-router-dom";
+import ImageUpload from "@/components/ImageUpload";
 
 interface BakeryProduct {
   id: string;
@@ -474,11 +475,11 @@ const Admin = () => {
               </div>
             </div>
             <div className="space-y-2">
-              <Label>{t("admin.image")} (URL)</Label>
-              <Input
+              <Label>{t("admin.image")}</Label>
+              <ImageUpload
                 value={productForm.image_url}
-                onChange={(e) => setProductForm({ ...productForm, image_url: e.target.value })}
-                placeholder="https://..."
+                onChange={(url) => setProductForm({ ...productForm, image_url: url })}
+                folder="products"
               />
             </div>
             <div className="flex justify-end gap-2 pt-4">
@@ -503,11 +504,11 @@ const Admin = () => {
           </DialogHeader>
           <div className="space-y-4 py-4">
             <div className="space-y-2">
-              <Label>{t("admin.image")} (URL) *</Label>
-              <Input
+              <Label>{t("admin.image")} *</Label>
+              <ImageUpload
                 value={imageForm.image_url}
-                onChange={(e) => setImageForm({ ...imageForm, image_url: e.target.value })}
-                placeholder="https://..."
+                onChange={(url) => setImageForm({ ...imageForm, image_url: url })}
+                folder="gallery"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">

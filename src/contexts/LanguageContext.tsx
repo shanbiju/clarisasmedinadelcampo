@@ -107,6 +107,12 @@ const translations: Record<string, Record<Language, string>> = {
   "admin.title-en": { es: "Título (Inglés)", en: "Title (English)" },
   "admin.category": { es: "Categoría", en: "Category" },
   "admin.no-access": { es: "No tienes permisos de administrador", en: "You don't have admin permissions" },
+  "admin.upload-image": { es: "Subir Imagen", en: "Upload Image" },
+  "admin.image-url-or-upload": { es: "URL de imagen o sube una", en: "Image URL or upload one" },
+  
+  // Videos Section
+  "videos.title": { es: "Descubre Nuestro Monasterio", en: "Discover Our Monastery" },
+  "videos.subtitle": { es: "Conoce más sobre nuestra vida contemplativa a través de estos vídeos", en: "Learn more about our contemplative life through these videos" },
   
   // Footer
   "footer.spiritual": { es: "Vida Espiritual", en: "Spiritual Life" },
