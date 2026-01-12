@@ -1,12 +1,11 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/google3c1c9440a572d29f.html",
-      "destination": "/google3c1c9440a572d29f.html"
+      "handle": "filesystem"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
