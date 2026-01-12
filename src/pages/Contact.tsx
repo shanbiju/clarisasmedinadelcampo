@@ -103,7 +103,7 @@ const Contact = () => {
               {/* Map embed placeholder */}
               <div className="aspect-video bg-muted flex items-center justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.123456789!2d-4.912!3d41.312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzQzLjIiTiA0wrA1NCc0My4yIlc!5e0!3m2!1sen!2ses!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.12!2d-4.912!3d41.312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd47503cab3a496b%3A0x6d9dc63276c0e5e4!2sConvento%20de%20Santa%20Clara!5e0!3m2!1ses!2ses!4v1768220562921"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
