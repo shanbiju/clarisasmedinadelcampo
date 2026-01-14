@@ -1,31 +1,35 @@
 <!doctype html>
 <html lang="es-ES">
   <head>
-    <!-- Básico -->
+    <!-- ================= BASIC ================= -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
 
-    <!-- SEO Principal -->
+    <!-- ================= SEO PRIMARY ================= -->
     <title>Monasterio de Santa Clara | Medina del Campo (Valladolid)</title>
+
     <meta
       name="description"
       content="Bienvenidos al Monasterio de Santa Clara de Medina del Campo. Comunidad de Hermanas Clarisas desde 1246. Iglesia histórica y dulces artesanos del convento."
     />
+
     <meta
       name="keywords"
       content="Monasterio de Santa Clara, Medina del Campo, Clarisas, convento, dulces conventuales, repostería artesanal, patrimonio religioso"
     />
-    <meta name="author" content="Monasterio de Santa Clara" />
-    <link rel="canonical" href="https://santaclara.es" />
 
-    <!-- Idioma y localización -->
+    <meta name="author" content="Monasterio de Santa Clara" />
+    <meta name="robots" content="index, follow" />
     <meta http-equiv="content-language" content="es-ES" />
 
-    <!-- Favicon -->
+    <!-- ================= CANONICAL ================= -->
+    <link rel="canonical" href="https://www.clarisasmedinadelcampo.com/" />
+
+    <!-- ================= FAVICON ================= -->
     <link rel="icon" href="/favicon.ico" />
 
-    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+    <!-- ================= OPEN GRAPH ================= -->
     <meta property="og:title" content="Monasterio de Santa Clara | Medina del Campo" />
     <meta
       property="og:description"
@@ -33,31 +37,46 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
-    <meta property="og:url" content="https://santaclara.es" />
-    <meta property="og:image" content="https://santaclara.es/og-image.jpg" />
+    <meta property="og:url" content="https://www.clarisasmedinadelcampo.com/" />
+    <meta
+      property="og:image"
+      content="https://www.clarisasmedinadelcampo.com/og-image.jpg"
+    />
 
-    <!-- Twitter -->
+    <!-- ================= TWITTER ================= -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Monasterio de Santa Clara | Medina del Campo" />
     <meta
       name="twitter:description"
       content="Comunidad de Hermanas Clarisas desde 1246 en Medina del Campo. Patrimonio, oración y dulces conventuales."
     />
-    <meta name="twitter:image" content="https://santaclara.es/og-image.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://www.clarisasmedinadelcampo.com/og-image.jpg"
+    />
 
-    <!-- Datos estructurados (SEO Local España) -->
+    <!-- ================= GOOGLE SEARCH CONSOLE ================= -->
+    <!-- (Keep this only if you used META verification) -->
+    <!--
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+    -->
+
+    <!-- ================= STRUCTURED DATA (LOCAL SEO SPAIN) ================= -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ReligiousOrganization",
         "name": "Monasterio de Santa Clara",
-        "url": "https://santaclara.es",
-        "image": "https://santaclara.es/og-image.jpg",
+        "url": "https://www.clarisasmedinadelcampo.com",
+        "logo": "https://www.clarisasmedinadelcampo.com/logo.png",
+        "image": "https://www.clarisasmedinadelcampo.com/og-image.jpg",
         "description": "Monasterio de las Hermanas Clarisas fundado en 1246 en Medina del Campo.",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Calle Duque de Ahumada, 49",
           "addressLocality": "Medina del Campo",
           "addressRegion": "Castilla y León",
+          "postalCode": "47400",
           "addressCountry": "ES"
         }
       }
@@ -65,9 +84,10 @@
   </head>
 
   <body>
+    <!-- ================= APP ROOT ================= -->
     <div id="root"></div>
 
-    <!-- Entrada de la aplicación -->
+    <!-- ================= VITE ENTRY ================= -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
